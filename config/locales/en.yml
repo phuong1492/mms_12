@@ -20,4 +20,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layout:
+    name-system: "User Manager System"
+    footer: "Ruby on Rails Tutorial"
+  static-page:
+    home:
+      title: "Home"
+      paragraph: "This is the home page for the system."
+      sign_up: "Sign up now!"
+    help:
+      title: "Help"
+      paragraph: "This is the help page for the sysyem."
+    about:
+      title: "About"
+      paragraph: "This is the about page for the sysyem."
