@@ -13,4 +13,14 @@ class User < ActiveRecord::Base
     dependent: :destroy
 
   belongs_to :team, inverse_of: :leader
+
+
+  has_many :project_users, dependent: :destroy
+  has_many :projects, through: :project_users, foreign_key: "user_id",
+    dependent: :destroy
+  
+  has_many :position_users, dependent: :destroy
+  has_many :positions, through: :position_users, foreign_key: "user_id",
+    dependent: :destroy
+
 end
