@@ -25,6 +25,7 @@ en:
     footer: "Ruby on Rails Tutorial"
     log_in: "Log in"
     log_out: "Log out"
+    profile: "Profile"
   static-page:
     home:
       title: "Home"
@@ -44,3 +45,8 @@ en:
     confirm_pw: "Confirm new password"
     new_pw: "New password"
     resend_pw: "Resend confirmation instructions"
+  user:
+    name: "Name: "
+    email: "Email: "
+    birthday: "Birthday: "
+    info: "Information User"
