@@ -42,7 +42,6 @@ GEM
       i18n (>= 0.4.1)
     ansi (1.5.0)
     arel (6.0.0)
-    bcrypt (3.1.10)
     axlsx (2.0.1)
       htmlentities (~> 4.3.1)
       nokogiri (>= 1.4.1)
@@ -58,6 +57,8 @@ GEM
     bootstrap-will_paginate (0.0.10)
       will_paginate
     builder (3.2.2)
+    byebug (5.0.0)
+      columnize (= 0.9.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -75,6 +76,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    columnize (0.9.0)
     debug_inspector (0.0.2)
     devise (3.5.1)
       bcrypt (~> 3.0)
@@ -160,10 +162,6 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.11.0)
-    mysql2 (0.3.18)
-    nokogiri (1.6.6.2)
-      mini_portile (~> 0.6.0)
-    orm_adapter (0.5.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.18)
@@ -293,6 +291,7 @@ DEPENDENCIES
   bcrypt (= 3.1.7)
   bootstrap-sass (= 3.2.0.0)
   bootstrap-will_paginate (= 0.0.10)
+  byebug
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)
   devise
@@ -303,9 +302,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-datetimepicker-rails (~> 2.4.1.0)
   jquery-rails
-  mysql2
-  rails (= 4.2.1)
-  rails-config
   mini_backtrace
   mini_magick (= 3.8.0)
   minitest-reporters
@@ -315,6 +311,7 @@ DEPENDENCIES
   pg
   pry
   rails (= 4.2.1)
+  rails-config
   rails-i18n
   rails_12factor (= 0.0.2)
   rufus-scheduler

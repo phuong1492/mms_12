@@ -3,9 +3,14 @@
     <%= link_to t("layout.name-system"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("static-page.home.title"), root_path %></li>
-        <li><%= link_to t("static-page.help.title"), help_path %></li>
-        <li><%= link_to t("static-page.about.title"), about_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to t("static-page.home.title"), root_path %></li>
+          <li><%= link_to t("layout.log_out"), destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to t("static-page.help.title"), help_path %></li>
+          <li><%= link_to t("static-page.about.title"), about_path %></li>
+          <li><%= link_to t("layout.log_in"), new_user_session_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
