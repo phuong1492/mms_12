@@ -1,0 +1,10 @@
+<li>
+  <div class= "col-md-3 col-md-offset-1">
+    <%= link_to user.name, [:admin, user] %></div>
+  <div class= "col-md-3 col-md-offset-5">
+    <%= link_to t("admin.user.detail"), [:admin, user], class: "btn btn-primary" %>
+    <%= link_to t("admin.user.edit"), [:edit, :admin, user], class: "btn btn-primary" %>
+    <%= link_to t("admin.user.delete"), [:admin, user], data: {confirm: t("admin.user.confirm")}, 
+      method: :delete, class: "btn btn-primary" %>
+  </div>
+</li>

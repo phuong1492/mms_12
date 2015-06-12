@@ -1,3 +1,5 @@
 user:
   role:
-   admin: "admin"
+    admin: "admin"
+  index:
+    page: 5

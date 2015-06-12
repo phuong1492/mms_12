@@ -96,3 +96,9 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+li {
+  overflow: auto;
+  padding: 5px 0;
+  list-style-type: none;
+}

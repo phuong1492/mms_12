@@ -1,6 +1,6 @@
 <div class="center jumbotron">
   <h1><%= t "static-page.home.title" %></h1>
-  <h2><%= t "static-page.home.paragraph" %></h2>
+  <h2><%= t "static-page.home.paragraph", name: current_user.name %></h2>
 </div>
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
             "http://rubyonrails.org/" %>

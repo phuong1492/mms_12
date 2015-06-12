@@ -26,10 +26,11 @@ en:
     log_in: "Log in"
     log_out: "Log out"
     profile: "Profile"
+    user: "User"
   static-page:
     home:
       title: "Home"
-      paragraph: "This is the home page for the system."
+      paragraph: "Welcome %{name} to website"
     help:
       title: "Help"
       paragraph: "This is the help page for the sysyem."
@@ -50,3 +51,10 @@ en:
     email: "Email: "
     birthday: "Birthday: "
     info: "Information User"
+  admin:
+    user:
+      all_user: "All Users"
+      detail: "Detail"
+      delete: "Delete"
+      edit: "Edit"
+      confirm: "You sure?"
