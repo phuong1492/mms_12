@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     root "users#index"
     resources :users
     resources :skills
+    resources :positions
   end
-
   resources :skills, only: :index
 end
