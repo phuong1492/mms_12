@@ -4,6 +4,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+          <li><%= link_to t("skill.index"), skills_path %></li>
           <li><%= link_to t("static-page.home.title"), root_path %></li>
           <li><%= link_to_if current_user.is_admin?, t("layout.user"), admin_users_path%></li>
           <li><%= link_to t("layout.profile"), current_user %>
