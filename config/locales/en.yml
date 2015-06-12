@@ -27,6 +27,7 @@ en:
     log_out: "Log out"
     profile: "Profile"
     user: "User"
+    position: "Position"
   static-page:
     home:
       title: "Home"
@@ -52,15 +53,17 @@ en:
     birthday: "Birthday: "
     info: "Information User"
   admin:
+    flash_danger: "You are not authorized to access this page."
     user:
       all_user: "All Users"
       detail: "Detail"
       delete: "Delete"
       edit: "Edit"
       confirm: "You sure?"
+    position:
+      all_position: "All Positions"
   skill:
     createskill: "Create skill"
     index: "Show All Skill"
     addskill: "Add Skill"
     createskillcomplete: "Create Skill Completed"
-

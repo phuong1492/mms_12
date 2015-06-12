@@ -1,5 +1,5 @@
 user:
   role:
     admin: "admin"
-  index:
-    page: 5
+index:
+  page: 5
