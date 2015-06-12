@@ -6,4 +6,8 @@ class Admin::PositionsController < ApplicationController
     @positions = Position.all 
     @positions = @positions.paginate page: params[:page], per_page: Settings.index.page
   end
+
+  def show
+    @position = Position.find params[:id]
+  end
 end
