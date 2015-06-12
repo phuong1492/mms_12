@@ -58,3 +58,9 @@ en:
       delete: "Delete"
       edit: "Edit"
       confirm: "You sure?"
+  skill:
+    createskill: "Create skill"
+    index: "Show All Skill"
+    addskill: "Add Skill"
+    createskillcomplete: "Create Skill Completed"
+

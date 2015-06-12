@@ -1,0 +1,10 @@
+<div>
+  <% if can? :create, @skills %>
+    <%= link_to t("skill.createskill"), new_admin_skill_path %>
+  <% else %>
+    <%= link_to t("skill.addskill"), root_path%>
+  <% end %>
+</div>
+<div>
+  <%= render partial: "skill", collection: @skills %>
+</div>
