@@ -1,0 +1,11 @@
+<%= form_for [:admin, @position] do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.label :abbreviation %>
+    <%= f.text_field :abbreviation, class: 'form-control' %>
+  </p>
+  <p>
+    <%= f.submit :Submit, class: 'btn btn-primary col-md-12' %>
+  </p>
+<% end %>
