@@ -23,4 +23,7 @@ class User < ActiveRecord::Base
   has_many :positions, through: :position_users, foreign_key: "user_id",
     dependent: :destroy
 
+  def is_admin?
+    role == Settings.user.role.admin
+  end
 end
