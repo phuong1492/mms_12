@@ -13,6 +13,12 @@ class Admin::SkillsController < ApplicationController
     end
   end
 
+  def destroy
+    Skill.find(params[:id]).destroy
+    flash[:success] = t "skill.delskillcompl"
+    redirect_to skills_path
+  end
+
   private 
   def skill_params
     params.require(:skill).permit :name 

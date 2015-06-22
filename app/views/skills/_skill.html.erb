@@ -1,3 +1,5 @@
 <div>
-  <%= skill.skill_name %><br>
+  <%= skill.name %>
+
+  <%= link_to t("skill.delskill"), admin_skill_path(skill), method: :delete %>
 </div>

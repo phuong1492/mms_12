@@ -63,4 +63,5 @@ en:
     index: "Show All Skill"
     addskill: "Add Skill"
     createskillcomplete: "Create Skill Completed"
-
+    delskill: "Delete Skill"
+    delskillcompl: "Delete Skill Conpleted"
