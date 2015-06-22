@@ -13,6 +13,20 @@ class Admin::SkillsController < ApplicationController
     end
   end
 
+  def edit
+    @skill = Skill.find params[:id]
+  end
+
+  def update
+    @skill = Skill.find params[:id]
+    if @skill.update_attributes skill_params
+      flash[:success] = t "skill.editskillcompl"
+      redirect_to skills_path
+    else
+      render "edit"
+    end
+  end
+
   def destroy
     Skill.find(params[:id]).destroy
     flash[:success] = t "skill.delskillcompl"
