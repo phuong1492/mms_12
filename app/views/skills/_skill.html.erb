@@ -1,5 +1,6 @@
 <div>
   <%= skill.name %>
 
+  <%= link_to t("skill.editskill"), edit_admin_skill_path(skill)%>
   <%= link_to t("skill.delskill"), admin_skill_path(skill), method: :delete %>
 </div>
