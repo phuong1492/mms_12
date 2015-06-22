@@ -9,8 +9,7 @@ class User < ActiveRecord::Base
     dependent: :destroy
 
   has_many :skill_users, dependent: :destroy
-  has_many :skills, through: :skill_users, foreign_key: "user_id",
-    dependent: :destroy
+  has_many :skills, through: :skill_users, foreign_key: "user_id"
 
   belongs_to :team, inverse_of: :leader
 
