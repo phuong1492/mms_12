@@ -62,6 +62,9 @@ en:
       confirm: "You sure?"
     position:
       all_position: "All Positions"
+      show: "Position Information"
+      name: "Name: "
+      abbreviation: "Abbreviation: "
   skill:
     createskill: "Create skill"
     index: "Show All Skill"
