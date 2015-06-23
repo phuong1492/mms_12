@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :positions
   end
   resources :skills, only: :index
+  resources :projects, only: :index
 end
