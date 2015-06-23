@@ -74,3 +74,11 @@ en:
     delskillcompl: "Delete Skill Conpleted"
     editskill: "Edit Skill"
     editskillcompl: "Skill has been Updated"
+  project:
+    index: "Show All Project"
+    createproject: "Create Project"
+    name: "Project Name"
+    abbrev: "Project Abbreviation"
+    starttime: "Start Time"
+    endtime: "Dead Line"
+    leader: "Leader"
