@@ -65,6 +65,10 @@ en:
       show: "Position Information"
       name: "Name: "
       abbreviation: "Abbreviation: "
+      update: "Updated Position!"
+      destroy: "Deleted Position!"
+      destroy_fail: "Failed"
+      edit: "Edit Position"
   skill:
     createskill: "Create skill"
     index: "Show All Skill"
