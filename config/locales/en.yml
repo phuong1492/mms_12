@@ -69,6 +69,8 @@ en:
       destroy: "Deleted Position!"
       destroy_fail: "Failed"
       edit: "Edit Position"
+      create: "Create Position"
+      create_suc: "Create success!"
   skill:
     createskill: "Create skill"
     index: "Show All Skill"

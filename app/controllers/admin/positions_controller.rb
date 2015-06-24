@@ -11,6 +11,20 @@ class Admin::PositionsController < ApplicationController
   def show
   end
 
+  def new
+    @position = Position.new
+  end
+
+  def create
+    @position = Position.new position_params
+    if @position.save
+      flash[:success] = t "admin.position.create_suc" 
+      redirect_to admin_position_path @position
+    else
+      render :new
+    end
+  end
+
   def edit
   end
 
