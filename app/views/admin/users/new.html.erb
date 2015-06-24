@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @user] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label t "admin.user.name" %>
+      <%= f.text_field :name, class: "form-control" %><br />
+
+      <%= f.label t "admin.user.email" %>
+      <%= f.email_field :email, class: "form-control" %><br />
+
+      <%= f.label t "admin.user.pw" %>
+      <%= f.password_field :password, class: "form-control" %><br />
+
+      <%= f.label t "admin.user.confirm_pw" %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off",
+        class: "form-control" %><br />
+
+      <%= f.label t "admin.user.birthday" %>
+      <%= f.datetime_field :birthday, class: "form-control datepicker" %><br />
+
+      <%= f.label t "admin.user.type" %>
+      <%= f.select :role, Settings.user.role %><br />
+
+      <%= f.fields_for :position_users do |p| %>
+        <%= p.label t "admin.user.position" %>
+        <%= p.collection_select :position_id, @positions, :id, :name %>
+      <% end %><br /><br />
+
+      <%= f.submit :submit, class: "btn btn-primary col-md-12" %>
+    <% end %>
+  </div>
+</div>
