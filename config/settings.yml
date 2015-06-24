@@ -1,5 +1,6 @@
 user:
   role:
     admin: "admin"
+    member: "member"
 index:
   page: 5

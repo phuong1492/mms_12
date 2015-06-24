@@ -11,8 +11,7 @@ class User < ActiveRecord::Base
   has_many :skill_users, dependent: :destroy
   has_many :skills, through: :skill_users, foreign_key: "user_id"
 
-  belongs_to :team, inverse_of: :leader
-
+  has_one :leading_team, class_name: "Team", foreign_key: "leader_id"
 
   has_many :project_users, dependent: :destroy
   has_many :projects, through: :project_users, foreign_key: "user_id",
@@ -21,6 +20,11 @@ class User < ActiveRecord::Base
   has_many :position_users, dependent: :destroy
   has_many :positions, through: :position_users, foreign_key: "user_id",
     dependent: :destroy
+
+  accepts_nested_attributes_for :position_users, allow_destroy: true
+
+  validates :name, presence: true, uniqueness: true
+  validates :email, presence: true
 
   scope :without_user, -> user {where.not id: user}
   
