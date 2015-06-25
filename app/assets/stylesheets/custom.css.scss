@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-datepicker";
 
 body {
   padding-top: 60px;
@@ -101,4 +102,12 @@ li {
   overflow: auto;
   padding: 5px 0;
   list-style-type: none;
+}
+.show-user {
+  margin-left: 20%;
+  overflow-y: scroll; 
+  height: 200px; 
+  width: 500px; 
+  padding-left:5%; 
+  border-style: solid;
 }

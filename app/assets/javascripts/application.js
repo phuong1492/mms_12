@@ -13,9 +13,27 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-datepicker/core
 //= require_tree .
-//= require bootstrap-datepicker
 $(document).ready(function(){
   $('.datepicker').datepicker({format: "dd/mm/yyyy",
     clearBtn: true});
+  select_user();
+  $("#team_leader_id").click(function(){
+    select_user();
+	})
 });
+
+function select_user(){
+  var a = $("input[id*=team_user_ids]");
+  for (var index = 0; index < a.length; index++){
+    if($("#team_leader_id").val() == a[index].value){
+      document.getElementById("team_user_ids_"+ a[index].value)
+        .parentNode.style.display = "none";
+    }
+    else{
+      document.getElementById("team_user_ids_"+ a[index].value)
+        .parentNode.style.display = "block";
+    }
+  }
+}
