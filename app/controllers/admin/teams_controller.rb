@@ -1,5 +1,4 @@
 class Admin::TeamsController < ApplicationController
-  before_action :authenticate_user!
   before_action :admin_user
   before_action :set_team, except: [:index, :new, :create]
   
@@ -14,7 +13,6 @@ class Admin::TeamsController < ApplicationController
   def new
     @team = Team.new
     @leaders = User.user_not_in_team
-    @team.team_users.build
   end
 
   def create
@@ -34,8 +32,7 @@ class Admin::TeamsController < ApplicationController
   end
 
   def team_params
-    params.require(:team).permit :name, :description,:leader_id,
-                                 :team_id, user_ids: [],
-                                 team_users_attributes: [:id, :user_id, :team_id, :_destroy]
+    params.require(:team).permit :name, :description, :leader_id,
+                                 :team_id, user_ids: []
   end
 end

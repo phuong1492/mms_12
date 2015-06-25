@@ -92,6 +92,7 @@ en:
       create: "Add new team"
       show: "Team Info"
       add_leader: "Choose Leader"
+      choose_user: "Choose User"
       form:
         name: "Name: %{name}"
         description: "Description: %{description}"
