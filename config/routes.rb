@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :users
     resources :skills
     resources :positions
+    resources :teams
   end
   resources :skills, only: :index
   resources :projects, only: :index

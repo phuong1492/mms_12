@@ -2,5 +2,8 @@ user:
   role:
     admin: "admin"
     member: "member"
+  not_in_team: 
+    id not in (select user_id from team_users)
 index:
   page: 5
+

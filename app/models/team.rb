@@ -3,4 +3,6 @@ class Team < ActiveRecord::Base
   has_many :users, through: :team_users, foreign_key: "team_id", dependent: :destroy
 
   belongs_to :leader, class_name: "User"
+
+  accepts_nested_attributes_for :team_users, allow_destroy: true
 end
