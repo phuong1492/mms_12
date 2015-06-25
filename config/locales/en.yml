@@ -87,6 +87,15 @@ en:
       edit: "Edit Position"
       create: "Create Position"
       create_suc: "Create success!"
+    team:
+      create_suc: "Create success!"
+      create: "Add new team"
+      show: "Team Info"
+      add_leader: "Choose Leader"
+      form:
+        name: "Name: %{name}"
+        description: "Description: %{description}"
+        leader: "Leader: %{leader}"
   skill:
     createskill: "Create skill"
     index: "Show All Skill"
