@@ -6,10 +6,25 @@
         <strong><%= t "admin.team.show" %></strong>
       </h2>
       <hr>
-      <div class="col-md-3 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1">
         <p><%= t "admin.team.form.name", name: @team.name %></p>
         <p><%= t "admin.team.form.description", description: @team.description %></p>
-        <p><%= t "admin.team.form.leader", leader: @team.leader.name %></p>
+        <p><%= t "admin.team.leader"%>
+           <%= link_to @team.leader.name, [:admin, @team.leader] %></p>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th><%= t "admin.team.user" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @team.users.each do |user| %>
+              <tr>
+                <th><%= link_to user.name, [:admin, user] %></th>
+              </tr>  
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

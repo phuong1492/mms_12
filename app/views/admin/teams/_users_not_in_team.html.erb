@@ -1,0 +1,16 @@
+<div class="col-xs-6">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><%= t "admin.team.add_user" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= f.collection_check_boxes :user_ids, @free_users, :id, :name do |b| %>
+        <tr>
+          <td><%= b.check_box %><%= b.object.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

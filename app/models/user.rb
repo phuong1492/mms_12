@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true
 
   scope :without_user, ->user{where.not id: user}
-  scope :user_not_in_team, ->{where Settings.user.not_in_team}
+  scope :not_in_team, ->{where Settings.user.not_in_team}
 
   def is_admin?
     role == Settings.user.role.admin

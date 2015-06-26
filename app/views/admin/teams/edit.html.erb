@@ -1,15 +1,15 @@
 <%= form_for [:admin, @team] do |f| %>
-  
+
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
-  
+
   <%= f.label :description %>
   <%= f.text_field :description, class: "form-control" %>
-  
-  <%= f.label :leader_id, t("admin.team.add_leader") %>
-  <%= f.collection_select :leader_id, @free_users, :id, :name %>
-  
+
+  <%= f.label :leader %>
+  <%= f.collection_select :leader_id, @leaders, :id, :name %>
   <div class="row">
+    <%= render "users_in_team", f: f %>
     <%= render "users_not_in_team", f: f %>
   </div>
   <br>

@@ -1,0 +1,13 @@
+<li>
+  <div class="col-md-3 col-md-offset-1">
+    <%= link_to team.name, [:admin, team] %></div>
+  <div class="col-md-3 col-md-offset-5">
+    <%= link_to t("admin.team.detail"), [:admin, team],
+      class: "btn btn-primary" %>
+    <%= link_to t("admin.team.edit"), [:edit, :admin, team],
+      class: "btn btn-primary" %>
+    <%= link_to t("admin.team.delete"), [:admin, team],
+      data: {confirm: t("admin.team.confirm")}, 
+      method: :delete, class: "btn btn-primary" %>
+  </div>
+</li>
