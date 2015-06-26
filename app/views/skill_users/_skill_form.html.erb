@@ -1,0 +1,23 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <table class="table table-bordered">
+    <tr>
+      <th></th>
+      <th><%= t "skill.name" %></th>
+      <th><%= t "skill.level" %></th>
+      <th><%= t "skill.year" %></th>
+    </tr>
+    <%= f.fields_for :skill_users do |builder| %>
+      <tr>
+        <td><%= builder.check_box :_destroy,
+          {checked: @user.skills.include?(builder.object.skill)}, false, true %></td>
+        <%= builder.hidden_field :skill_id %>
+        <td><%= builder.object.skill.try(:name) %></td>
+        <td><%= builder.select :level, Settings.user.level %></td>
+        <td><%= builder.text_field :used_year %></td>
+        <%= hidden_field_tag :flag, Settings.user.zero %>
+      </tr>
+    <% end %>
+  </table>
+  <%= f.submit :submit, class: "btn btn-primary" %>
+<% end %>

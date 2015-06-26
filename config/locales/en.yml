@@ -117,6 +117,10 @@ en:
     delskillcompl: "Delete Skill Conpleted"
     editskill: "Edit Skill"
     editskillcompl: "Skill has been Updated"
+    name: "Name"
+    level: "Level"
+    year: "Year"
+    list_skill: "Skill: "
   project:
     index: "Show All Project"
     createproject: "Create Project"

@@ -7,12 +7,26 @@
         <strong><%= t "user.info" %></strong>
       </h2>
       <hr>
-      <div class="user_info">
-        <div class = "col-md-5">
-          <p><%= t("user.name") + @user.name %></p>
-          <p><%= t("user.email") + @user.email %></p>
-          <p><%= t("user.birthday") + @user.birthday.strftime("%F") %></p>
+      <div class = "col-md-5">
+        <p><%= t("user.name") + @user.name %></p>
+        <p><%= t("user.email") + @user.email %></p>
+        <p><%= t("user.birthday") + @user.birthday.strftime("%F") %></p>
+        <p><%= t "skill.list_skill" %>
+        <div class="row">
+          <div class="col-xs-6">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><%= t "skill.name" %></th>
+                  <th><%= t "skill.level" %></th>
+                  <th><%= t "skill.year" %></th>
+                </tr>
+              </thead>
+              <%= render partial: "skill_user", collection: @user.skill_users %>
+            </table>
+          </div> 
         </div>
+        <%= link_to t("skill.addskill"), user_add_skills_path(@user) %>
       </div>
     </div>
   </div>

@@ -1,0 +1,13 @@
+<%= form_for @user do |p| %>
+  <%= render "shared/error_messages", object: p.object %>
+  <table class="table table-bordered">
+    <%= p.collection_check_boxes :skill_ids, Skill.all, :id, :name do |b| %>
+      <tr>
+        <td><%= b.check_box %></td>
+        <td><%= b.object.name %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= hidden_field_tag :flag, Settings.user.one %>
+  <%= p.submit :add, class: "btn btn-primary" %>
+<% end %>
