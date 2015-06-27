@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
     dependent: :destroy
 
   accepts_nested_attributes_for :position_users, allow_destroy: true
+  accepts_nested_attributes_for :skill_users, allow_destroy: true
 
   validates :name, presence: true, uniqueness: true
   validates :email, presence: true

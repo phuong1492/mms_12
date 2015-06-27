@@ -1,0 +1,11 @@
+<% provide :title, t("skill.addskill") %>
+<h1><%= t "skill.addskill" %></h1>
+<h3><%= link_to t("layouts.profile"), user_path(@user) %></h3>
+<div class="row">
+  <div class="col-md-6">
+    <%= render "skill_form" %>
+  </div>
+  <div class="col-md-6">
+    <%= render "skill" %>
+  </div>
+</div>

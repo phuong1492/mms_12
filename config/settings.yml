@@ -4,6 +4,13 @@ user:
     member: "member"
   not_in_team: 
     id not in (select user_id from team_users)
+  one: "1"
+  zero: "0"
+  level:
+    0: "0"
+    1: "1"
+    2: "2"
+    3: "3"
 index:
   page: 5
 
