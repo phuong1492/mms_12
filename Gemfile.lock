@@ -88,6 +88,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.5.2)
     factory_girl (4.5.0)
@@ -210,6 +211,23 @@ GEM
     rdoc (4.2.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rspec-core (3.3.1)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-rails (3.3.2)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
     ruby-progressbar (1.7.1)
     rubyzip (1.0.0)
     rufus-scheduler (3.0.9)
@@ -271,6 +289,7 @@ DEPENDENCIES
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)
   devise
+  factory_girl (~> 4.5.0)
   factory_girl_rails
   faker (= 1.4.2)
   guard-minitest
@@ -289,6 +308,7 @@ DEPENDENCIES
   rails-i18n
   rails_12factor (= 0.0.2)
   rails_config
+  rspec-rails (~> 3.0)
   rufus-scheduler
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
