@@ -33,7 +33,9 @@ gem "rufus-scheduler"
 group :development, :test do
   gem "byebug"
   gem "spring"
- gem "web-console", "~> 2.0"
+  gem "web-console", "~> 2.0"
+  gem "rspec-rails", "~> 3.0"
+  gem "factory_girl", "~> 4.5.0"
 end
 
 group :test do
