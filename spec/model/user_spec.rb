@@ -75,4 +75,23 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be_valid
     end
   end
+
+  context "user-skill" do
+    before do
+      @skills = []
+      10.times {@skills << FactoryGirl.build(:skill)}
+    end
+
+    it "should vaild when user has many skills" do
+      @user.skills = @skills
+      @user.save
+      expect(@user.skills.count).to eql 10
+    end
+
+    it "should vaild when user has no skill" do
+      @user.skills = []
+      @user.save
+      expect(@user.skills.count).to eql 0
+    end
+  end
 end
