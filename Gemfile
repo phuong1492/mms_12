@@ -42,6 +42,8 @@ group :test do
   gem "minitest-reporters"
   gem "mini_backtrace"
   gem "guard-minitest"
+  gem "rspec-collection_matchers"
+  gem "shoulda-matchers"
 end
 
 group :production do

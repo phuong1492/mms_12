@@ -76,10 +76,29 @@ RSpec.describe User, type: :model do
     end
   end
 
+  context "test scope" do
+    before do
+      @users = []
+      10.times {@users << FactoryGirl.create(:user)}
+      @user = FactoryGirl.create :user
+    end
+
+    it "test scope without user" do
+      expect(User.without_user(@user)).not_to include User.all 
+    end
+
+    it "test scope user not in team" do
+      team = FactoryGirl.build :team
+      team.users << @user
+      expect(User.not_in_team).not_to include team.users
+    end
+  end
+  
   context "user-skill" do
     before do
       @skills = []
       10.times {@skills << FactoryGirl.build(:skill)}
+      @skill = FactoryGirl.build :skill
     end
 
     it "should vaild when user has many skills" do
@@ -92,6 +111,33 @@ RSpec.describe User, type: :model do
       @user.skills = []
       @user.save
       expect(@user.skills.count).to eql 0
+    end
+
+    it "check level and used_year of skill user" do
+      @user.skills << @skill
+      @user.skill_users.last.level = 3
+      @user.skill_users.last.used_year = 3
+      @user.save
+      expect(@user.skill_users.last.level).to eql 3
+      expect(@user.skill_users.last.used_year).to eql 3
+    end
+  end
+  describe "test associations" do
+    context "test have_many" do
+      let(:user) {FactoryGirl.build(:user)}
+      it {expect(user).to have_many(:skills)}
+      it {expect(user).to have_many(:positions)}
+      it {expect(user).to have_many(:teams)}
+      it {expect(user).to have_many(:projects)}
+      it {expect(user).to have_many(:skill_users).dependent(:destroy)}
+      it {expect(user).to have_many(:position_users).dependent(:destroy)}
+      it {expect(user).to have_many(:team_users).dependent(:destroy)}
+      it {expect(user).to have_many(:project_users).dependent(:destroy)}
+    end
+
+    context "test has_one" do
+      let(:user) {FactoryGirl.build(:user)}
+      it {expect(user).to have_one(:leading_team)}
     end
   end
 end
