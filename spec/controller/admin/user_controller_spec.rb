@@ -54,4 +54,21 @@ RSpec.describe Admin::UsersController, type: :controller do
       it {expect(response).to render_template :new}
     end
   end
+
+  describe "POST create" do
+    context "with vaild attributes" do
+      before do
+        post :create, user: FactoryGirl.attributes_for(:user)
+      end
+      it {expect(response).to redirect_to admin_users_path}
+      it {expect(flash[:success]).to eql "Create user success"}
+    end
+
+    context "with invaild attributes" do
+      before do
+        post :create, user: FactoryGirl.attributes_for(:invalid_user)
+      end
+      it {expect(response).to render_template :new}
+    end
+  end
 end

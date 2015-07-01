@@ -3,7 +3,6 @@ source "https://rubygems.org"
 gem "rails", "4.2.1"
 gem "mysql2"
 gem "rails_config"
-gem "factory_girl_rails"
 gem "cancancan"
 gem "bootstrap-sass",       "3.2.0.0"
 gem "rails-i18n"
@@ -35,7 +34,6 @@ group :development, :test do
   gem "spring"
   gem "web-console", "~> 2.0"
   gem "rspec-rails", "~> 3.0"
-  gem "factory_girl", "~> 4.5.0"
 end
 
 group :test do
@@ -44,6 +42,7 @@ group :test do
   gem "guard-minitest"
   gem "rspec-collection_matchers"
   gem "shoulda-matchers"
+  gem "factory_girl_rails"
 end
 
 group :production do
