@@ -10,4 +10,8 @@ FactoryGirl.define do
     password_confirmation "password"
     role "normal"
   end
+
+  factory :invalid_user, parent: :user do |b|
+    b.email nil
+  end
 end

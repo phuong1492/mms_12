@@ -293,7 +293,6 @@ DEPENDENCIES
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)
   devise
-  factory_girl (~> 4.5.0)
   factory_girl_rails
   faker (= 1.4.2)
   guard-minitest
