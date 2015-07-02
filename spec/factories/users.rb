@@ -8,6 +8,7 @@ FactoryGirl.define do
     end
     password "password"
     password_confirmation "password"
+    birthday = Time.zone.now
     role "normal"
   end
 

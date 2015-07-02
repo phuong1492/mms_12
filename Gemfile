@@ -28,6 +28,7 @@ gem "paperclip", "~> 4.1"
 gem "pry"
 gem "faker", "1.4.2"
 gem "rufus-scheduler"
+gem "capybara"
 
 group :development, :test do
   gem "byebug"
